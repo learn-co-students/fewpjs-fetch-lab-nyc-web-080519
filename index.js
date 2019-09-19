@@ -1,5 +1,10 @@
 function fetchBooks() {
-
+  const allBooks = fetch('https://anapioficeandfire.com/api/books')
+  // .then(function(response) { return response.json})
+  .then(response => response.json())
+  // .then(function(json) { renderBooks(json)})
+  .then(json => renderBooks(json))
+  return allBooks
 }
 
 function renderBooks(json) {
